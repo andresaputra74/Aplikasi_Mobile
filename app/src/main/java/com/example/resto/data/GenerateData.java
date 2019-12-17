@@ -20,7 +20,8 @@ public class GenerateData {
                 TIPE_MAKANAN,
                 "Chicken Burger",
                 "Rp. 34.000",
-                "Chicken Burger dari bahan pilihan yang berkualitas baik, dengan roti kualitas terbaik, daun selada yang masih segar serta daging ayam pilihan yang berkualitas dengan baik"
+                "Chicken Burger dari bahan pilihan yang berkualitas baik, dengan roti kualitas terbaik, daun selada yang masih segar serta daging ayam pilihan yang berkualitas dengan baik",
+                4.5
         ));
         listMenuMakanan.add(new Menu(
                 R.drawable.burgerblack,
