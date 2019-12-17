@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RatingBar;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -47,6 +48,8 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.ViewHolder> {
 	@Override
 	public void onBindViewHolder(@NonNull final ViewHolder holder, int position) {
 		holder.nama.setText(listMenu.get(position).getNama());
+		holder.ratingScore.setText(String.valueOf(listMenu.get(position).getRating()));
+		holder.ratingBar.setRating((float) listMenu.get(position).getRating());
 		Glide.with(activity.getApplicationContext())
 				.load(listMenu.get(position).getGambar())
 				.apply(new RequestOptions().override(120, 120))
@@ -70,13 +73,16 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.ViewHolder> {
 	class ViewHolder extends RecyclerView.ViewHolder {
 
 		final ImageView gambar;
-		final TextView nama;
+		final TextView nama, ratingScore;
+		final RatingBar ratingBar;
 
 		ViewHolder(@NonNull View itemView) {
 			super(itemView);
 
+			ratingScore = itemView.findViewById(R.id.tv_rating_score);
 			gambar = itemView.findViewById(R.id.img_makanan);
 			nama = itemView.findViewById(R.id.tv_nama_makanan);
+			ratingBar = itemView.findViewById(R.id.rb_star);
 		}
 	}
 }

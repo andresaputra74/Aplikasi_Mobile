@@ -6,7 +6,11 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+    </style>
 
+    <style name="GoldenRatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">#f0d12d</item>
+        <item name="colorControlActivated">#FFD700</item>
     </style>
 
 </resources>
